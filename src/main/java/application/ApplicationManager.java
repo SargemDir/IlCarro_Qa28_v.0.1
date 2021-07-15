@@ -14,6 +14,7 @@ public void init(){
     wd.manage().window().maximize();
     wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     wd.navigate().to("https://ilcarro.xyz/search");
+    userHelper = new UserHelper(wd);
 }
 
 public void stop(){
