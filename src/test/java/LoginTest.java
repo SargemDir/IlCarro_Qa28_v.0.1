@@ -1,9 +1,7 @@
 import models.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class LoginTest extends TestBase{
 
@@ -25,6 +23,12 @@ public void precondition(){
         Assert.assertEquals(loginS,"Logged in success");
 
     }
+    @BeforeSuite
+    @BeforeClass
+    @BeforeMethod
+
+
+
     @Test
     public void loginTestPositiveDto(){
         User user=new User().withEmail("noa@gmail.com").withPassword("Nnoa12345$");
@@ -38,4 +42,8 @@ public void precondition(){
         Assert.assertEquals(loginS,"Logged in success");
 
     }
+    //@AfterMethod
+    //@AfterClass
+    //@AfterSuite
+
 }

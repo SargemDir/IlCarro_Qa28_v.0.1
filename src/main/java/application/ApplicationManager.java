@@ -21,7 +21,7 @@ public void stop(){
     wd.quit();
 }
 
-    public UserHelper userHelper() {
-        return userHelper;
-    }
+  public UserHelper userHelper() {
+       return userHelper;
+   }
 }
