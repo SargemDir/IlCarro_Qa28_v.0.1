@@ -59,4 +59,12 @@ public class CarHelper extends HelperBase{
         return wd.findElements(By.xpath("//h1[contains(.,'Let the car work')]")).size()>0;
     }
 
+    public void attachPhoto() {
+        wd.findElement(By.id("photos"))
+                .sendKeys("/Users/tayahatum/QA28/IlCarro_Qa28_v.0.1/src/bmw.jpeg");
+    }
+
+    public boolean isCarAdded() {
+        return true;
+    }
 }

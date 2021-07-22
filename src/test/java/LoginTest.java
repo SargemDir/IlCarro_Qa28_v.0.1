@@ -16,7 +16,7 @@ public void precondition(){
 
         app.userHelper().openLoginForm();
         app.userHelper().fillLoginForm("noa@gmail.com","Nnoa12345$");
-        app.userHelper().submitLogin();
+        app.userHelper().submitForm();
         app.userHelper().pause(3000);
         String loginS=app.userHelper().getText(By.xpath("//div[@class='dialog-container']//h2"));
         app.userHelper().clickOkButton();
@@ -33,7 +33,7 @@ public void precondition(){
 
         app.userHelper().openLoginForm();
         app.userHelper().fillLoginForm(user);
-        app.userHelper().submitLogin();
+        app.userHelper().submitForm();
         app.userHelper().pause(3000);
         String loginS=app.userHelper().getText(By.xpath("//div[@class='dialog-container']//h2"));
         app.userHelper().clickOkButton();
