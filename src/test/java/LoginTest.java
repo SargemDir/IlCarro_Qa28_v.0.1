@@ -23,9 +23,7 @@ public void precondition(){
         Assert.assertEquals(loginS,"Logged in success");
 
     }
-    @BeforeSuite
-    @BeforeClass
-    @BeforeMethod
+
 
 
 
@@ -42,8 +40,6 @@ public void precondition(){
         Assert.assertEquals(loginS,"Logged in success");
 
     }
-    //@AfterMethod
-    //@AfterClass
-    //@AfterSuite
+
 
 }
