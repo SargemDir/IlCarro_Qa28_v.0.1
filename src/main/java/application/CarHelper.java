@@ -22,6 +22,22 @@ public class CarHelper extends HelperBase{
             type(By.id("model"), car.getModel());
             type(By.id("year"), car.getYear());
             type(By.id("engine"), car.getEngine());
+
+            select(By.id("fuel"),car.getFuel());
+            select(By.id("gear"),car.getGear());
+            select(By.id("wheelsDrive"), car.getWD());
+
+            type(By.id("doors"), car.getDoors());
+            type(By.id("seats"), car.getSeats());
+            type(By.id("class"), car.getClasS());
+
+            type(By.id("fuelConsumption"),car.getFuelConsumption());
+            type(By.id("serialNumber"), car.getCarRegNumber());
+            type(By.id("price"), car.getPrice());
+            type(By.id("distance"), car.getDistanceIncluded());
+            type(By.cssSelector(".feature-input"), car.getTypeFeature());
+            type(By.id("about"), car.getAbout());
+
             pause(7000);
 
         }

@@ -17,6 +17,7 @@ public void init(){
     wd.navigate().to("https://ilcarro.xyz/search");
     userHelper = new UserHelper(wd);
     carHelper= new CarHelper(wd);
+
 }
 
 public void stop(){

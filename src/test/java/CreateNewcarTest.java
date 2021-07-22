@@ -1,4 +1,5 @@
 import models.Car;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,6 +11,7 @@ public class CreateNewcarTest extends TestBase{
 
     @Test
     public void createNewCar(){
+
        Car car = Car.builder()
                .address("Tel Aviv, Israel")
                .make("BMW")
