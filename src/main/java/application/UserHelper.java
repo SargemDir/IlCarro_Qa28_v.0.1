@@ -50,4 +50,13 @@ public class UserHelper extends HelperBase{
     public void checkPolicy() {
         click(By.xpath("//label[@for='terms-of-use']"));
     }
+
+    public void login(User user) {
+        click(By.xpath("//a[.=' Log in ']"));
+        type(By.id("email"),user.getEmail());
+        type(By.id("password"),user.getPassword());
+        click(By.xpath("//*[@type='submit']"));
+        click(By.xpath("//button[.='Ok']"));
+        pause(2000);
+    }
 }

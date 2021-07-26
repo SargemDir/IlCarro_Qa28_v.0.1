@@ -4,6 +4,8 @@ import models.Car;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CarHelper extends HelperBase{
     public CarHelper(WebDriver wd) {
@@ -56,15 +58,26 @@ public class CarHelper extends HelperBase{
     }
 
     private boolean isCarFormPresent() {
+
+
         return wd.findElements(By.xpath("//h1[contains(.,'Let the car work')]")).size()>0;
     }
 
     public void attachPhoto() {
         wd.findElement(By.id("photos"))
                 .sendKeys("/Users/tayahatum/QA28/IlCarro_Qa28_v.0.1/src/bmw.jpeg");
+        pause(2000);
     }
 
     public boolean isCarAdded() {
-        return true;
+        String text
+                = wd.findElement(By.xpath("//div[@class='dialog-container']//h1")).getText();
+        return text.contains("Car added");
+    }
+
+    public void clickButtonSubmit() {
+        new WebDriverWait(wd, 10)
+                .until(ExpectedConditions.elementToBeClickable(wd.findElement(By.xpath("//button[text()='Submit']"))));
+        click(By.xpath("//button[text()='Submit']"));
     }
 }

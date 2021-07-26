@@ -1,13 +1,15 @@
 import models.Car;
-import org.openqa.selenium.JavascriptExecutor;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class CreateNewcarTest extends TestBase{
     @BeforeMethod
-    public void preCondition(){
-        //login
+    public void precondition(){
+        if(app.userHelper().isLogged()){
+            app.userHelper().login(new User().withEmail("noa@gmail.com").withPassword("Nnoa12345$"));
+        }
     }
 
     @Test
@@ -40,7 +42,8 @@ public class CreateNewcarTest extends TestBase{
        app.carHelper().openCarForm();
        app.carHelper().fillCarForm(car);
        app.carHelper().attachPhoto();
-       // assert
+        app.carHelper().clickButtonSubmit();
+        app.carHelper().pause(3000);
         Assert.assertTrue(app.carHelper().isCarAdded());
 
     }
