@@ -46,6 +46,10 @@ public class HelperBase {
         js.executeScript("document.querySelector('footer').style.display='none'");
     }
 
+    public boolean isElementPresent(By locator){
+        return wd.findElements(locator).size()>0;
+    }
+
 }
 
 
