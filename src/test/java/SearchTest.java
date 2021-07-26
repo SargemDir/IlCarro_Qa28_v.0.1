@@ -21,5 +21,21 @@ public class SearchTest extends TestBase{
         Assert.assertTrue(app.search().buttonYallaInactive());
     }
 
-    //06/26/2021 - 06/30/2021
+    @Test
+    public void selectPeriodCurrentMouth(){
+        app.search().fillSearchFormCurrentMonth("Haifa","07/26/2021","07/30/2021");
+        app.userHelper().submitForm();
+        app.carHelper().pause(2000);
+        Assert.assertTrue(app.search().isListOfCarAppeared());
+
+
+    }
+
+    @Test
+    public void selectPeriodInFuture(){
+        app.search().fillSearchFormInFuture("Haifa","09/26/2021","10/30/2021");
+        app.userHelper().submitForm();
+        app.carHelper().pause(2000);
+        Assert.assertTrue(app.search().isListOfCarAppeared());
+    }
 }

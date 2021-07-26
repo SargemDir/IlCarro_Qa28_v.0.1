@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.LocalDate;
+
 public class SearchHelper extends HelperBase{
     public SearchHelper(WebDriver wd) {
         super(wd);
@@ -18,7 +20,10 @@ public class SearchHelper extends HelperBase{
 
     private void typeInputPeriod(String dataFrom, String dataTo) {
         type(By.id("dates"),dataFrom + " - " + dataTo);
-        click(By.cssSelector("div.cdk-overlay-container"));
+        int i =(int)(System.currentTimeMillis()/1000)%3600;
+        String screenshot = "src/test/screenshots/scren-"+i+".png";
+        takeScreenshot(screenshot);
+       click(By.cssSelector("div.cdk-overlay-container"));
 
     }
 
@@ -45,5 +50,46 @@ public class SearchHelper extends HelperBase{
     public boolean buttonYallaInactive() {
         WebElement yallaBtn = wd.findElement(By.xpath("//button[@type='submit']"));
         return !yallaBtn.isEnabled();
+    }
+
+    public void fillSearchFormCurrentMonth(String city, String dataFrom, String dataTo) {
+        fillInputCity(city);
+        selectPeriodCurrentMonth(dataFrom,dataTo);
+    }
+
+    private void selectPeriodCurrentMonth(String dataFrom, String dataTo) {
+        //07/26/2021      07/30/2021
+        click(By.id("dates"));
+
+        String[]dataF =dataFrom.split("/");
+        String[]dataT = dataTo.split("/");
+
+        //dataF[1]====26   //div[text()=' 26 ']
+        // dataT[1] ====30   //div[text()=' 30 ']
+
+        String dataLocatorFrom= String.format("//div[text()=' %s ']",dataF[1]);
+        String dataLacotorTo= String.format("//div[text()=' %s ']",dataT[1]);
+
+        click(By.xpath(dataLocatorFrom));
+        click(By.xpath(dataLacotorTo));
+    }
+
+    public void fillSearchFormInFuture(String city, String dataFrom, String dataTo) {
+        fillInputCity(city);
+        //   09/26/2021      10/30/2021
+        click(By.id("dates"));
+
+        String[]dataF =dataFrom.split("/");
+        String[]dataT = dataTo.split("/");
+
+        int diffStart=0;
+        if(LocalDate.now().getMonthValue()!=Integer.parseInt(dataF[0])){
+            diffStart=Integer.parseInt(dataF[0])-LocalDate.now().getMonthValue();
+        }
+        for (int i = 0; i < diffStart; i++) {
+            click(By.xpath("//button[@aria-label='Next month']"));
+        }
+        String dataLocatorFrom= String.format("//div[text()=' %s ']",dataF[1]);
+        click(By.xpath(dataLocatorFrom));
     }
 }

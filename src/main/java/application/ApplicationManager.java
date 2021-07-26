@@ -23,7 +23,7 @@ public void init(){
 }
 
 public void stop(){
-    //wd.quit();
+    wd.quit();
 }
 
   public UserHelper userHelper() {
