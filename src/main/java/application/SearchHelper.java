@@ -91,5 +91,22 @@ public class SearchHelper extends HelperBase{
         }
         String dataLocatorFrom= String.format("//div[text()=' %s ']",dataF[1]);
         click(By.xpath(dataLocatorFrom));
+
+        int diffEnd =0;
+        if(Integer.parseInt(dataF[0])!=Integer.parseInt(dataT[0])){
+            diffEnd= (Integer.parseInt(dataT[0])-Integer.parseInt(dataF[0]));
+        }
+        for (int i = 0; i < diffEnd; i++) {
+            click(By.xpath("//button[@aria-label='Next month']"));
+        }
+
+        String dataLocatoTo= String.format("//div[text()=' %s ']",dataT[1]);
+        click(By.xpath(dataLocatoTo));
+    }
+
+    public void backToHome() {
+        click(By.xpath("//a[@href='/']"));
+        new WebDriverWait(wd,10)
+                .until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector(".search-container"))));
     }
 }
