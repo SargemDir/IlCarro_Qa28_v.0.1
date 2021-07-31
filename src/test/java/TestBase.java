@@ -18,6 +18,5 @@ protected static ApplicationManager app =new ApplicationManager();
         app.stop();
     }
 //cooo
-    //cooo1
 
 }
