@@ -81,4 +81,7 @@ public class CarHelper extends HelperBase{
         click(By.xpath("//button[text()='Submit']"));
     }
 
+    public void submitCar() {
+        click(By.xpath("//button[text()='Search cars']"));
+    }
 }

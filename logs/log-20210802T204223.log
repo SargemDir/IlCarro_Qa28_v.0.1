@@ -1,0 +1,7 @@
+20:42:29  INFO  application.ApplicationManager - Start browser CHROME
+20:42:33  INFO  application.ApplicationManager - Navigate to -->https://ilcarro.xyz/search
+20:42:33  INFO  TestBase - Start method -->createNewCar
+20:43:00  INFO  TestBase - End of method -->createNewCar
+20:43:00  INFO  TestBase - Start method -->loginTestPositive
+20:43:21  INFO  TestBase - Start method -->registrationTest
+20:43:41  INFO  TestBase - Start method -->negativeTestSendKey

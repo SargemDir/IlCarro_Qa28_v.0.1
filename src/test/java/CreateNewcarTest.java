@@ -40,6 +40,9 @@ public class CreateNewcarTest extends TestBase{
                .about("very good car")
                .build();
         System.out.println("Car Num --->" +car.getCarRegNumber());
+        System.out.println(car.getCarRegNumber());
+
+
        app.carHelper().openCarForm();
        app.carHelper().fillCarForm(car);
        app.carHelper().attachPhoto();
@@ -47,6 +50,10 @@ public class CreateNewcarTest extends TestBase{
         app.carHelper().pause(3000);
         Assert.assertTrue(app.carHelper().isCarAdded());
 
+    }
+    @AfterMethod
+    public void postCondition(){
+        app.carHelper().submitCar();
     }
 
 }
