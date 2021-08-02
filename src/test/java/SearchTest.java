@@ -4,15 +4,15 @@ import org.testng.annotations.Test;
 
 public class SearchTest extends TestBase{
 
-    @Test
+    @Test(groups = {"web"})
     public void positiveTestSendKey(){
         //with concatenate string
-        app.search().typeSearchCurrentMonth("Haifa","07/29/2021","07/30/2021");
+        app.search().typeSearchCurrentMonth("Haifa","08/10/2021","08/30/2021");
         app.userHelper().submitForm();
         app.carHelper().pause(2000);
         Assert.assertTrue(app.search().isListOfCarAppeared());
     }
-    @Test
+    @Test(groups = {"a","web"})
     public void negativeTestSendKey(){
         //with concatenate string
         app.search().typeSearchCurrentMonth("Haifa","06/29/2021","06/30/2021");
@@ -24,7 +24,7 @@ public class SearchTest extends TestBase{
 
     @Test()
     public void selectPeriodCurrentMouth(){
-        app.search().fillSearchFormCurrentMonth("Haifa","07/29/2021","07/30/2021");
+        app.search().fillSearchFormCurrentMonth("Haifa","08/10/2021","08/30/2021");
         app.userHelper().submitForm();
         app.carHelper().pause(2000);
         Assert.assertTrue(app.search().isListOfCarAppeared());
@@ -34,7 +34,7 @@ public class SearchTest extends TestBase{
 
     @Test
     public void selectPeriodInFuture(){
-        app.search().fillSearchFormInFuture("Haifa","09/26/2021","10/30/2021");
+        app.search().fillSearchFormInFuture("Haifa","08/10/2021","08/30/2021");
         app.userHelper().submitForm();
         app.carHelper().pause(2000);
         Assert.assertTrue(app.search().isListOfCarAppeared());

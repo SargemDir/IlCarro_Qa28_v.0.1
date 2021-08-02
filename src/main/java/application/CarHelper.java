@@ -80,4 +80,5 @@ public class CarHelper extends HelperBase{
                 .until(ExpectedConditions.elementToBeClickable(wd.findElement(By.xpath("//button[text()='Submit']"))));
         click(By.xpath("//button[text()='Submit']"));
     }
+
 }
