@@ -1,0 +1,7 @@
+20:26:26  INFO  application.ApplicationManager - Start browser CHROME
+20:26:30  INFO  application.ApplicationManager - Navigate to -->https://ilcarro.xyz/search
+20:26:31  INFO  TestBase - Start method -->registrationTestFrmDPClass
+20:26:31  INFO  TestBase - Registration with --> Name: Sony-->LastName: Low --> Email:sonya@gmail.com-->Password -->Nnoa12345$
+20:26:40  INFO  TestBase - End of method -->registrationTestFrmDPClass
+20:26:40  INFO  TestBase - Start method -->registrationTestFrmDPClass
+20:26:40  INFO  TestBase - Registration with --> Name: Sony-->LastName: Low --> Email:sonya1@gmail.com-->Password -->Ss12345$

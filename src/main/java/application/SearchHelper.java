@@ -24,6 +24,7 @@ public class SearchHelper extends HelperBase{
         String screenshot = "src/test/screenshots/scren-"+i+".png";
         takeScreenshot(screenshot);
         click(By.cssSelector("div.cdk-overlay-container"));
+        //logger.info (screenshot src/test/screenshots/scren-"+i+".png")
 
     }
 
