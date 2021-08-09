@@ -7,7 +7,9 @@ import org.testng.annotations.*;
 import java.lang.reflect.Method;
 
 public class TestBase {
-protected static ApplicationManager app =new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
+
+protected static ApplicationManager app =new ApplicationManager
+        (System.getProperty("browser", BrowserType.FIREFOX));
 
 Logger logger= LoggerFactory.getLogger(TestBase.class);
 

@@ -28,9 +28,9 @@ public class MyDataProvider {
 
         List<Object[]> list= new ArrayList<>();
 
-        list.add(new Object[]{"Sony","Low","fox@gmail.com","Ff12345$"});
-        list.add(new Object[]{"Sony","Low","fox1@gmail.com","Ff12345$"});
-        list.add(new Object[]{"Sony","Low","fox2@gmail.com","Ff12345$"});
+        list.add(new Object[]{"Sony","Low","fox5@gmail.com","Ff12345$"});
+        list.add(new Object[]{"Sony","Low","fox4@gmail.com","Ff12345$"});
+        list.add(new Object[]{"Sony","Low","fox3@gmail.com","Ff12345$"});
 
         return list.iterator();
     }
