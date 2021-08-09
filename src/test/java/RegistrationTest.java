@@ -47,7 +47,7 @@ app.userHelper().pause(7000);
         app.userHelper().fillRegistrationForm(user);
         app.userHelper().checkPolicy();
         app.userHelper().submitForm();
-        app.userHelper().pause(7000);
+        app.userHelper().pause(2000);
         String regS = app.userHelper().getText(By.xpath("//div[@class='dialog-container']//h2"));
         Assert.assertTrue(regS.contains("success"));
         logger.info("Test passed");
