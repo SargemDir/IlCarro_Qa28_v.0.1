@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 public class TestBase {
 
 protected static ApplicationManager app =new ApplicationManager
-        (System.getProperty("browser", BrowserType.FIREFOX));
+        (System.getProperty("browser", BrowserType.CHROME));
 
 Logger logger= LoggerFactory.getLogger(TestBase.class);
 
