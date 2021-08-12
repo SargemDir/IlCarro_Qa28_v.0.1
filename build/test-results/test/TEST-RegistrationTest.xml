@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RegistrationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-09T15:39:26" hostname="MBP-Taya.lan" time="47.54">
+  <properties/>
+  <testcase name="registrationTestFrmDPClass[0](Sony, Low, fox5@gmail.com, Ff12345$)" classname="RegistrationTest" time="9.064"/>
+  <testcase name="registrationTestFrmDPClass[1](Sony, Low, fox4@gmail.com, Ff12345$)" classname="RegistrationTest" time="8.69"/>
+  <testcase name="registrationTestFrmDPClass[2](Sony, Low, fox3@gmail.com, Ff12345$)" classname="RegistrationTest" time="8.711"/>
+  <system-out><![CDATA[18:39:26 INFO  TestBase - Start method -->registrationTestFrmDPClass
+18:39:26 INFO  TestBase - Registration with --> Name: Sony-->LastName: Low --> Email:fox5@gmail.com-->Password -->Ff12345$
+18:39:35 INFO  TestBase - Test passed
+18:39:35 INFO  TestBase - End of method -->registrationTestFrmDPClass
+18:39:35 INFO  TestBase - Start method -->registrationTestFrmDPClass
+18:39:46 INFO  TestBase - Registration with --> Name: Sony-->LastName: Low --> Email:fox4@gmail.com-->Password -->Ff12345$
+18:39:54 INFO  TestBase - Test passed
+18:39:54 INFO  TestBase - End of method -->registrationTestFrmDPClass
+18:39:54 INFO  TestBase - Start method -->registrationTestFrmDPClass
+18:40:05 INFO  TestBase - Registration with --> Name: Sony-->LastName: Low --> Email:fox3@gmail.com-->Password -->Ff12345$
+18:40:13 INFO  TestBase - Test passed
+18:40:14 INFO  TestBase - End of method -->registrationTestFrmDPClass
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
